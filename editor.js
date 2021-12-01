@@ -6,18 +6,18 @@ const HTML_MODE = {
 const CSS_MODE = 'css';
 const JS_MODE = 'javascript';
 
-const HTML_EDITOR_VALUE = '<h1>Hello World!</h1>';
-const CSS_EDITOR_VALUE = `h1 { 
-	text-align: center;
+const HTML_EDITOR_DEFAULT_VALUE = '<h1>Hello World!</h1>';
+const CSS_EDITOR_DEFAULT_VALUE = `
+h1 { 
+  text-align: center;
 }`
-const JS_EDITOR_VALUE = `console.log('hello world!')\n`
+const JS_EDITOR_DEFAULT_VALUE = `console.log('hello world!')\n`
 
 function defaultEditorConfig(mode, value) {
 	return {
 		lineNumbers: true,
 		lineWrapping: true,
 		theme: 'ayu-dark',
-		// scrollbarStyle: 'null',
 		value: value ? value : '',
 		mode: mode
 	}
@@ -28,29 +28,32 @@ function createEditor(elem, mode, value) {
 }
 
 function createHtmlDocument(htmlSnippet, cssStyles, jsCode) {
-	return `<!DOCTYPE html>
+	return `
+<!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	${cssStyles}
-	${jsCode}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+${cssStyles}
+${jsCode}
 </head>
 <body>
-	${htmlSnippet}
+${htmlSnippet}
 </body>
 </html>`
 }
 
 function createScript(jsCode) {
-	return `<script type='text/javascript'>
-	${jsCode}
+	return `
+<script type='text/javascript'>
+${jsCode}
 </script>`
 }
 
 function createStyle(cssStyle) {
-	return `<style type='text/css'>
-	${cssStyle}
+	return `
+<style type='text/css'>
+${cssStyle}
 </style>`
 }
 
@@ -69,4 +72,13 @@ function createUrl(htmlDoc, oldUrl) {
 
 	const file = new Blob([htmlDoc], {type: 'text/html'});
 	return URL.createObjectURL(file);
+}
+
+function saveContent(name, value) {
+	localStorage.setItem(name, value);
+	return value;
+}
+
+function getContent(name) {
+	return localStorage.getItem(name);
 }
