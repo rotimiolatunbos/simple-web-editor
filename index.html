@@ -1,14 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Simple Web IDE</title>
+	<title>Simple Web Editor</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	
+	<!--Codemirror Files-->
+	<link rel="stylesheet" type="text/css" href="codemirror/lib/codemirror.css">
+	<link rel="stylesheet" type="text/css" href="codemirror/theme/dracula.css">
+	<link rel="stylesheet" type="text/css" href="codemirror/theme/ayu-dark.css">
+
+	<script type="text/javascript" src="codemirror/lib/codemirror.js"></script>
+	<script type="text/javascript" src="codemirror/mode/javascript/javascript.js"></script>
+	<script type="text/javascript" src="codemirror/mode/css/css.js"></script>
+	<script type="text/javascript" src="codemirror/mode/xml/xml.js"></script>
+
+	<!-- Main JS Files -->
+	<script type="text/javascript" src="editor.js"></script>
+	<script type="text/javascript" src="script.js"></script>
 </head>
 <body>
-	<div id="main">
-		<div id="css"></div>
-		<div id="html"></div>
-		<div id="js"></div>
-		<div id="display"></div>
+	<div id="header">
+		<h2>Simple web editor</h2>
+		<button class="run-button">Run</button>
+	</div>
+	<div id="main" class="right-view">
+		<div id="css" class="editor">
+			<div class="heading">
+				<span class="name">css</span>
+			</div>
+			<main></main>
+		</div>
+		<div id="html" class="editor">
+			<div class="heading">
+				<span class="name">html</span>
+			</div>
+			<main></main>
+		</div>
+		<div id="js" class="editor">
+			<div class="heading">
+				<span class="name">js</span>
+			</div>
+			<main></main>
+		</div>
+		<iframe src="" id="display"></iframe>
+	</div>
+	<div id="footer">
+		<p>Some content goes here</p>
 	</div>
 </body>
 </html>
