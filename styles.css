@@ -58,7 +58,7 @@ body {
 
 .editor main {
 	flex: 1;
-	height: calc((100vh - 238px)/3);
+	height: calc((100vh - 188px)/3);
 }
 
 #display {
@@ -89,7 +89,6 @@ body {
 .top-view #display {
 	grid-column: 1 / 4;
 	grid-row: 2 / 4;
-	/*background-color: blue;*/
 }
 
 /* left view styles */
