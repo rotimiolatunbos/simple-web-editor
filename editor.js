@@ -17,7 +17,8 @@ function defaultEditorConfig(mode, value) {
 	return {
 		lineNumbers: true,
 		lineWrapping: true,
-		theme: 'midnight',
+		theme: 'dracula',
+		scrollbarStyle: 'overlay',
 		value: value ? value : '',
 		mode: mode
 	}
@@ -69,7 +70,6 @@ function createUrl(htmlDoc, oldUrl) {
 	if (oldUrl) {
 		URL.revokeObjectURL(oldUrl);
 	}
-
 	const file = new Blob([htmlDoc], {type: 'text/html'});
 	return URL.createObjectURL(file);
 }

@@ -33,9 +33,10 @@ body {
 #header .view span {
 	display: inline-block;
 	padding: 5px 12px;
+	cursor: pointer;
 }
 
-.view .active {
+#header .view .active {
 	background-color: #212126;
 }
 
@@ -69,7 +70,7 @@ body {
 }
 
 .editor .name {
-	background-color: #0F192A;
+	background-color: #282A36;
 	display: inline-block;
 	padding: 6px 16px;
 	text-transform: uppercase;
