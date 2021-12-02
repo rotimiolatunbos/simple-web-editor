@@ -7,8 +7,7 @@ const CSS_MODE = 'css';
 const JS_MODE = 'javascript';
 
 const HTML_EDITOR_DEFAULT_VALUE = '<h1>Hello World!</h1>';
-const CSS_EDITOR_DEFAULT_VALUE = `
-h1 { 
+const CSS_EDITOR_DEFAULT_VALUE = `h1 { 
   text-align: center;
 }`
 const JS_EDITOR_DEFAULT_VALUE = `console.log('hello world!')\n`
@@ -47,7 +46,8 @@ ${htmlSnippet}
 function createScript(jsCode) {
 	return `
 <script type='text/javascript'>
-${jsCode}
+function fn() { ${jsCode} }
+document.addEventListener('DOMContentLoaded', fn);
 </script>`
 }
 

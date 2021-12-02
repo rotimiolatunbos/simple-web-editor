@@ -61,16 +61,11 @@ window.onload = function () {
 			'js', getEditorContent(jsEditor)
 		));
 
-		// display.srcdoc = createHtmlDocument(html, css, js);
 		source = createUrl(createHtmlDocument(html, css, js), source);
 		display.src = source;
 	}
 
 	runButton.onclick = updateDisplay;
 	
-	// htmlEditor.on('change', updateDisplay);
-	// cssEditor.on('change', updateDisplay);
-	// jsEditor.on('change', updateDisplay);
-
 	updateDisplay();
 }
