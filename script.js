@@ -22,6 +22,30 @@ window.onload = function () {
 		savedJs ? savedJs : JS_EDITOR_DEFAULT_VALUE
 	);
 
+	const main = document.querySelector('#main');
+
+	const view = Array.from(document.querySelector('.view').querySelectorAll('span'));
+
+	function setView(value) {
+		main.setAttribute('class', `${value}-view`);
+	}
+
+	for (let node of view) {
+		if (node.getAttribute('class') == 'active') {
+			setView(node.innerText);
+		}
+
+		node.onclick = function (event) {
+			view.forEach(function (node) {
+				if (node.getAttribute('class') == 'active') {
+					node.classList.remove('active');
+				}
+			})
+			setView(event.target.innerText);
+			node.classList.add('active');
+		}
+	}
+
 	const display = document.querySelector('#display');
 
 	const runButton = document.querySelector('.run-button');

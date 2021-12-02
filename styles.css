@@ -20,12 +20,31 @@ body {
 	display: inline-block;
 }
 
-.run-button {
-	background-color: #444857;
+#header .view {
+	display: inline-block;
+	color: #FFFFFF;
+	float: right;
+	font-size: 14px;
+	margin: 0 0 0 18px;
+	border: 1px solid #212126;
+	border-radius: 3px;
+}
+
+#header .view span {
+	display: inline-block;
+	padding: 5px 12px;
+}
+
+.view .active {
+	background-color: #212126;
+}
+
+#header .run-button {
+	background-color: #FFFFFF;
 	border-radius: 3px;
 	border: none;
 	float: right;
-	color: #FFFFFF;
+	color: #060606;
 	padding: 6px 23px;
 }
 /* codemirror custom style */
@@ -34,7 +53,7 @@ body {
 	height: inherit !important;
 }
 
-/* Main & Editor View Styles */
+/* main & editor view styles */
 
 #main {
 	flex: 1;
@@ -50,7 +69,7 @@ body {
 }
 
 .editor .name {
-	background-color: #0A0E14;
+	background-color: #0F192A;
 	display: inline-block;
 	padding: 6px 16px;
 	text-transform: uppercase;

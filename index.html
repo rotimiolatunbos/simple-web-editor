@@ -7,7 +7,7 @@
 	<!--Codemirror Files-->
 	<link rel="stylesheet" type="text/css" href="codemirror/lib/codemirror.css">
 	<link rel="stylesheet" type="text/css" href="codemirror/theme/dracula.css">
-	<link rel="stylesheet" type="text/css" href="codemirror/theme/ayu-dark.css">
+	<link rel="stylesheet" type="text/css" href="codemirror/theme/midnight.css">
 
 	<script type="text/javascript" src="codemirror/lib/codemirror.js"></script>
 	<script type="text/javascript" src="codemirror/mode/javascript/javascript.js"></script>
@@ -21,9 +21,16 @@
 <body>
 	<div id="header">
 		<h2>Simple web editor</h2>
+
+		<div class="view">
+			<span>left</span>
+			<span class="active">top</span>
+			<span>right</span>
+		</div>
+
 		<button class="run-button">Run</button>
 	</div>
-	<div id="main" class="top-view">
+	<div id="main">
 		<div id="css" class="editor">
 			<div class="heading">
 				<span class="name">css</span>

@@ -17,7 +17,7 @@ function defaultEditorConfig(mode, value) {
 	return {
 		lineNumbers: true,
 		lineWrapping: true,
-		theme: 'ayu-dark',
+		theme: 'midnight',
 		value: value ? value : '',
 		mode: mode
 	}
