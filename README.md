@@ -8,6 +8,7 @@ The editors are based on [codemirror](https://codemirror.net/) js library.
 Check it out [here](https://rotimiolatunbos.github.io/simple-web-editor).
 
 ## Demo
+![Editor Demo](/demo/editor.gif)
 
 ## Usage
 
